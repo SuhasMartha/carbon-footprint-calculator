@@ -28,5 +28,4 @@ function App() {
     </AppProvider>
   );
 }
-
 export default App;
