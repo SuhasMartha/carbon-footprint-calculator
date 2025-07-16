@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { AppProvider } from './contexts/AppContext';
 import Navigation from './components/Navigation';
 import HomePage from './pages/HomePage';
@@ -12,19 +12,17 @@ import FamilyPage from './pages/FamilyPage';
 function App() {
   return (
     <AppProvider>
-      <Router>
-        <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
-          <Navigation />
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/calculator" element={<InputFormPage />} />
-            <Route path="/results" element={<ResultsPage />} />
-            <Route path="/tracker" element={<TrackerPage />} />
-            <Route path="/family" element={<FamilyPage />} />
-            <Route path="/about" element={<AboutPage />} />
-          </Routes>
-        </div>
-      </Router>
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/calculator" element={<InputFormPage />} />
+          <Route path="/results" element={<ResultsPage />} />
+          <Route path="/tracker" element={<TrackerPage />} />
+          <Route path="/family" element={<FamilyPage />} />
+          <Route path="/about" element={<AboutPage />} />
+        </Routes>
+      </div>
     </AppProvider>
   );
 }
